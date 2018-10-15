@@ -1,0 +1,248 @@
+@charset "utf-8";
+$base-font-size: 50px !default; //变量的值可以根据自己需求定义
+@function pxTorem($px) { //$px为需要转换的字号
+  @return $px / $base-font-size * 1rem;
+}
+
+/* CSS Document */
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
+input, button, select, textarea {/*去掉表单元素点击时的背景色*/
+  outline: none
+}
+
+input, button {
+  font-family: "Arial", "微软雅黑";
+  border: none;
+}
+
+ul, ol li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  -webkit-tap-highlight-color: rgba(255, 255, 255, 0);/*去掉a标签点击时的背景*/
+  -webkit-user-select: none;
+  -moz-user-focus: none;
+  -moz-user-select: none;
+}
+
+img {
+  vertical-align: bottom; //去除底部间隙
+}
+
+html,body {
+  width: 100%;
+  height: 100%;
+}
+
+$a4a9b3: #a4a9b3;
+$blue: #4280f2;
+$red: #f55c5c;
+$green: #40b953;
+$color_6: #565e6d;
+$pink: #FF6D96;
+$fff: #fff;
+$border_line: #EBEDF2;
+
+body {
+  font-family: "Arial", "微软雅黑";
+  background: #EBEDF2;
+  color: $a4a9b3;
+  position: relative;
+}
+
+.white {
+  background: $fff;
+  height: 100%;
+}
+
+.container {
+  //height: 100%;
+  margin: 0 auto;
+}
+
+.margin_bottom {
+  //margin-bottom: pxTorem(50px)!important;
+  width: 100%;
+  height: pxTorem(50px);
+}
+
+.red {
+  color: $red;
+}
+
+.blue {
+  color: $blue;
+}
+
+.green {
+  color: $green;
+}
+
+.pink {
+  color: $pink !important;
+}
+
+.color_6 {
+  color: $color_6;
+}
+
+.footer {
+  width: 100%;
+  height: pxTorem(50px);
+  background: $fff;
+  border-top: 1px solid $border_line;
+  position: fixed;
+  bottom: 0;
+  a {
+    color: #BFC3CB;
+  }
+  li {
+    width: 50%;
+    text-align: center;
+    float: left;
+    &.select {
+      color: $blue;
+    }
+    img {
+      width: pxTorem(20px);
+      height: pxTorem(17px);
+    }
+    p {
+      &:first-child {
+        width: pxTorem(20px);
+        height: pxTorem(20px);
+        &.icon {
+          background-size: cover;
+          background-position: center;
+          margin: 0 auto;
+          margin-top: pxTorem(8px);
+        }
+        &.icon_sy_h {
+          background-image: url("../images/sy_h.png");
+        }
+        &.icon_sy_l {
+          background-image: url("../images/sy_l.png");
+        }
+        &.icon_sjzx_h {
+          background-image: url("../images/sjzx_h.png");
+        }
+        &.icon_sjzx_l {
+          background-image: url("../images/sjzx_l.png");
+        }
+        &.icon_sxt_h {
+          background-image: url("../images/sxt_h.png");
+        }
+        &.icon_sxt_l {
+          background-image: url("../images/sxt_l.png");
+        }
+        &.icon_w_h {
+          background-image: url("../images/w_h.png");
+        }
+        &.icon_w_l {
+          background-image: url("../images/w_l.png");
+        }
+      }
+      &:last-child {
+        font-size: pxTorem(10px);
+        color: inherit;
+        line-height: 1;
+        margin-top: pxTorem(5px);
+      }
+    }
+  }
+}
+
+.fl {
+  float: left;
+}
+
+.rl {
+  float: right;
+}
+
+.show {
+  display: block;
+}
+
+.hide {
+  display: none;
+}
+
+.hidden {
+  visibility: hidden;
+}
+
+//error page
+.errorPage{
+  background: $fff;
+  height: 100%;
+  .error{
+    width: pxTorem(300px);
+    height: pxTorem(200px);
+    position: absolute;
+    left: 50%;
+    top: 40%;
+    margin-left: pxTorem(-150px);
+    margin-top: pxTorem(-100px);
+    border-radius: pxTorem(10px);
+    background: $fff;
+    text-align: center;
+    img{
+      max-width: 100%;
+    }
+    p{
+      font-size: pxTorem(20px);
+      color: $color_6;
+      padding: 0 10px;
+      line-height: 1.5;
+      margin-top: pxTorem(60px);
+      text-align: center;
+    }
+  }
+}
+.faultInfo{
+  width: 100%;
+  background: rgba($blue, 0.3);
+  color: $fff;
+  p{
+    text-align: center;
+      height: pxTorem(32px);
+      line-height: pxTorem(32px);
+      font-size: pxTorem(14px);
+      color: $red;
+      span{
+        margin-top: pxTorem(2px);
+        &.tip{
+          width: pxTorem(28px);
+          height: pxTorem(28px);
+          float: right;
+          margin-right: 3%;
+        }
+        &.downTip{
+          background: url("../images/fault_down.png") no-repeat;
+          background-size: 100% 100%;
+        }
+        &.upTip{
+          background: url("../images/fault_up.png") no-repeat;
+          background-size: 100% 100%;
+        }
+      }
+  }
+  ul{
+    font-size: pxTorem(14px);
+    color: $blue;
+    li{
+      padding:0 10%;
+      height: pxTorem(36px);
+      line-height: pxTorem(36px);
+      text-align: center;
+      border-top: 1px solid rgba($blue, .2);
+    }
+  }
+}

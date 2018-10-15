@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>数据中心</title>
+    <meta name="viewport"
+          content="width=device-width,initial-scale=1,maximum-scale=1, minimum-scale=1,user-scalable=no">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/pageStyle.css">
+    <script src="js/echarts.min.js"></script>
+</head>
+<body>
+<div class="container stay margin_bottom">
+    <div class="topTitle manager">
+        <ul>
+            <li><a href="#">客流</a></li>
+            <li class="select"><a href="">驻留</a></li>
+            <li><a href="">圈长到点</a></li>
+            <li><a href="">工作时长</a></li>
+        </ul>
+    </div>
+    <div class="content">
+        <ul class="statisticsTitle">
+            <li class="select"><a href="#">日统计</a><span></span></li>
+            <li><a href="">周统计</a><span></span></li>
+            <li><a href="">月统计</a><span></span></li>
+        </ul>
+    </div>
+    <div class="zl_analysis">
+        <p class="modelTitle">客流分析</p>
+        <div class="analysisCard">
+            <div class="card">
+                <div class="cardPanel">
+                    <img src="images/pjzl.png" alt="">
+                    <ul>
+                        <li><span>8</span><span>分钟</span><p><span class="up"></span><span>12%</span></p></li>
+                        <li>平均驻留</li>
+                    </ul>
+                </div>
+            </div>
+            <span class="line"></span>
+            <div class="card">
+                <div class="cardPanel">
+                    <img src="images/pm.png" alt="">
+                    <ul>
+                        <li><span>14</span><p><span class="down"></span><span class="green">5</span></p></li>
+                        <li>排名</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div id="kl_analysis"></div>
+        <div class="legend">
+            <span></span>
+            <span>周期趋势图</span>
+            <span></span>
+        </div>
+    </div>
+    <div class="flowComposition">
+        <p class="modelTitle">人流构成TOP6</p>
+        <table>
+            <thead>
+            <tr>
+                <th width="11.5%">排名</th>
+                <th width="51%">门店名</th>
+                <th width="21.6%">客流量</th>
+                <th width="15.9%">占比</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>1</td>
+                <td>特斯拉电动车海岸城店</td>
+                <td>100人</td>
+                <td>10%</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>特斯拉电动车海岸城店</td>
+                <td>100人</td>
+                <td>10%</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>特斯拉电动车海岸城店</td>
+                <td>100人</td>
+                <td>10%</td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>特斯拉电动车海岸城店</td>
+                <td>100人</td>
+                <td>10%</td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td>特斯拉电动车海岸城店</td>
+                <td>100人</td>
+                <td>10%</td>
+            </tr>
+            <tr>
+                <td>6</td>
+                <td>特斯拉电动车海岸城店</td>
+                <td>100人</td>
+                <td>10%</td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="passengerHours">
+        <p class="modelTitle">驻留时段TOP6</p>
+        <div id="passengerHours"></div>
+        <div class="legend">
+            <span></span>
+            <span>各时间段客流量占比</span>
+            <span></span>
+        </div>
+    </div>
+    <div class="daytimeTrend">
+        <p class="modelTitle">日间趋势</p>
+        <div id="daytimeTrend"></div>
+    </div>
+</div>
+<ul class="footer">
+    <a href="#">
+        <li>
+            <p class="icon icon_sy_h"></p>
+            <p>首页</p>
+        </li>
+    </a>
+    <a href="#">
+        <li class="select">
+            <!--<img src="images/sjzx_l.png" alt="">-->
+            <p class="icon icon_sjzx_l"></p>
+            <p>数据中心</p>
+        </li>
+    </a>
+    <a href="#">
+        <li>
+            <!--<img src="images/sxt_l.png" alt="">-->
+            <p class="icon icon_sxt_h"></p>
+            <p>摄像头</p>
+        </li>
+    </a>
+    <a href="#">
+        <li>
+            <!--<img src="images/w_l.png" alt="">-->
+            <p class="icon icon_w_h"></p>
+            <p>我</p>
+        </li>
+    </a>
+</ul>
+<script src="js/fontSize.js"></script>
+<script src="js/jquery-2.1.4.js"></script>
+<script src="js/page/kl_analysis_echarts.js"></script>
+<script src="js/page/passengerHours_echarts.js"></script>
+<script src="js/page/daytimeTrend_echarts.js"></script>
+</body>
+</html>

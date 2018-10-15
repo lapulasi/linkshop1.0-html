@@ -1,0 +1,2073 @@
+@charset "utf-8";
+$base-font-size: 50px !default; //变量的值可以根据自己需求定义
+@function pxTorem($px) { //$px为需要转换的字号
+  @return $px / $base-font-size * 1rem;
+}
+
+$fff: #fff;
+$blue: #4280f2;
+$red: #f55c5c;
+$green: #40b953;
+$pink: #FF6D96;
+$color_6: #565e6d;
+$color_9: #A4A9B3;
+$F4F6FA: #F4F6FA;
+$border_line: #EBEDF2;
+
+$font_size12: 12px;
+$font_size13: 13px;
+$font_size14: 14px;
+$font_size15: 15px;
+$font_size16: 16px;
+$font_size18: 18px;
+$font_size24: 24px;
+
+@mixin border($c) {
+  border: 1px solid $c;
+}
+div.img {
+  width: 100%;
+  height: pxTorem(216px);
+  background-position: center;
+  background-repeat:no-repeat;
+  background-size: cover;
+  clear: both;
+}
+.index {
+  .banner {
+    ul {
+      height: pxTorem(66px);
+      background: $fff;
+      position: relative;
+      font-size: pxTorem($font_size13);
+      padding: 0 3.7%;
+      border: 1px solid transparent;
+      &:before {
+        content: '';
+        width: 0;
+        height: 0;
+        position: absolute;
+        border-left: 10px solid transparent;
+        border-right: 10px solid transparent;
+        border-bottom: 10px solid $fff;
+        left: 14px;
+        top: -9px;
+      }
+      li {
+        line-height: 15px;
+        span {
+          font-size: pxTorem($font_size15);
+          margin-right: pxTorem(10px);
+          color: $color_6;
+        }
+        &:first-child {
+          margin-top: pxTorem(12px);
+        }
+        &:last-child {
+          margin-top: pxTorem(10px);
+        }
+      }
+    }
+  }
+  .echarts {
+    background: $fff;
+    padding: 0 3.7%;
+    height: pxTorem(292px);
+    overflow: hidden;
+    p {
+      font-size: pxTorem($font_size13);
+      margin: pxTorem(16px) 0 pxTorem(16px);
+    }
+  }
+  #graph {
+    width: 100%;
+    height: pxTorem(237px);
+  }
+}
+
+#manage_graph {
+  width: 100%;
+  height: pxTorem(237px);
+}
+
+.classify {
+  padding: 3%;
+  .panel {
+    height: pxTorem(88px);
+    background: $fff;
+    overflow: hidden;
+    margin-top: pxTorem(5px);
+    &:first-child {
+      margin-top: 0;
+    }
+    img {
+      float: left;
+      width: pxTorem(54px);
+      height: pxTorem(54px);
+      margin: pxTorem(17px) pxTorem(8px) pxTorem(17px) pxTorem(13px);
+    }
+    ul.info {
+      float: left;
+      width: 22%;
+      overflow: hidden;
+      margin-top: pxTorem(20px);
+      margin-right: 16.7%;
+      li {
+        clear: both;
+        span {
+          float: left;
+          &:first-child{
+            font-size: pxTorem($font_size24);
+            color: $blue;
+            line-height: 1;
+            font-weight: bold;
+          }
+          &:last-child{
+            line-height: pxTorem($font_size24);
+          }
+        }
+        p {
+          float: right;
+          line-height: pxTorem($font_size24);
+        }
+        &:first-child {
+          font-size: pxTorem($font_size16);
+          color: $color_6;
+          line-height: pxTorem(24px);
+          overflow: hidden;
+        }
+        &:last-child {
+          font-size: pxTorem($font_size15);
+          margin-top: pxTorem(5px);
+          line-height: 1;
+        }
+      }
+    }
+    ul.text {
+      float: left;
+      //margin-left: pxTorem(73px);
+      margin-top: pxTorem(23px);
+      font-size: pxTorem($font_size14);
+      li {
+        line-height: 1;
+        &:last-child {
+          margin-top: pxTorem(14px);
+        }
+        span {
+          color: $color_6;
+          margin-left: pxTorem(10px);
+        }
+      }
+    }
+    ul.pjgs {
+      float: left;
+      margin-top: pxTorem(23px);
+      font-size: pxTorem($font_size14);
+      margin-left: pxTorem(10px);
+      li {
+        &:last-child {
+          margin-top: pxTorem(12px);
+        }
+      }
+      span {
+        float: left;
+        margin-right: pxTorem(5px);
+      }
+    }
+    ul.three {
+      float: left;
+      /*margin-left: pxTorem(73px);*/
+      margin-top: pxTorem(8px);
+      font-size: pxTorem($font_size14);
+      li {
+        line-height: pxTorem(24px);
+        span {
+          color: $color_6;
+          margin-left: pxTorem(10px);
+        }
+      }
+    }
+    .up {
+      width: pxTorem(8px);
+      height: pxTorem(11px);
+      background-image: url("../images/up.png");
+      background-size: cover;
+      background-position: center;
+    }
+    .down {
+      width: pxTorem(8px);
+      height: pxTorem(11px);
+      background-image: url("../images/down.png");
+      background-size: cover;
+      background-position: center;
+    }
+    ul.number {
+      float: left;
+      margin-top: pxTorem(23px);
+      color: $color_6;
+      line-height: 1;
+      margin-left: pxTorem(20px);
+      font-size: pxTorem($font_size14);
+      li {
+        line-height: 1;
+        &:last-child {
+          margin-top: pxTorem(18px);
+        }
+      }
+    }
+    ol {
+      float: left;
+      font-size: pxTorem($font_size14);
+      margin-top: pxTorem(23px);
+      margin-left: pxTorem(6px);
+      li {
+        overflow: hidden;
+        span {
+          float: left;
+          line-height: 1;
+        }
+        .up, .down {
+          margin-right: pxTorem(4px);
+          margin-left: pxTorem(8px);
+        }
+        &:last-child {
+          margin-top: pxTorem(14px);
+        }
+      }
+    }
+  }
+}
+
+.rank {
+  margin-top: pxTorem(10px);
+  background: $fff;
+  overflow: hidden;
+  .title {
+    padding: 0 3.7%;
+    font-size: pxTorem($font_size13);
+    color: $color_6;
+    overflow: hidden;
+    margin-top: pxTorem(16px);
+    margin-bottom: pxTorem(12px);
+    span {
+      float: left;
+      line-height: 1.1;
+    }
+    a {
+      float: right;
+      color: $color_9;
+      line-height: 1.1;
+    }
+  }
+
+  ul.statisticsItems {
+    padding: 0 3.7%;
+    overflow: hidden;
+    margin-top: pxTorem(14px);
+    font-size: pxTorem(15px);
+    li {
+      float: left;
+      line-height: 1;
+      line-height: pxTorem(35px);
+      margin-right: pxTorem(24px);
+      a {
+        border-bottom: 2px solid $fff;
+        padding-bottom: pxTorem(8px);
+        color: $color_6;
+      }
+      &.select {
+        a {
+          color: $blue;
+          border-bottom: 2px solid $blue;
+        }
+      }
+    }
+  }
+
+}
+
+.wrapper03 {
+  position: relative;
+  height: pxTorem(35px);
+  width: 100%;
+  overflow: hidden;
+  margin: 0 auto;
+  .scroller {
+    position: absolute;
+    ul {
+      padding: 0 3.7%;
+      overflow: hidden;
+      font-size: pxTorem(15px);
+      li {
+        height: pxTorem(35px);
+        float: left;
+        line-height: pxTorem(35px);
+        text-align: center;
+        a {
+          border-bottom: 2px solid $fff;
+          padding-bottom: pxTorem(8px);
+          color: $color_6;
+          padding-bottom: pxTorem(8px);
+          margin-right: pxTorem(24px);
+        }
+        &.cur {
+          a {
+            color: $blue;
+            border-bottom: 2px solid $blue;
+          }
+        }
+      }
+    }
+  }
+}
+
+.general {
+  .wrapper03 {
+    background: $blue;
+    height: pxTorem(44px);
+    ul {
+      font-size: pxTorem(18px);
+      li {
+        height: pxTorem(44px);
+        //line-height: pxTorem(44px);
+        a {
+          color: rgba($fff, .6);
+          border-bottom: 2px solid $blue;
+        }
+        &.cur {
+          a {
+            color: $fff;
+            border-bottom: 2px solid $fff;
+          }
+        }
+      }
+    }
+  }
+}
+
+.manageRankDetail {
+  .wrapper03 {
+    height: pxTorem(44px);
+    background: $fff;
+    .scroller {
+      ul {
+        li {
+          height: pxTorem(44px);
+          line-height: pxTorem(44px);
+          a {
+            padding-bottom: pxTorem(12px);
+          }
+        }
+      }
+    }
+  }
+}
+
+.rank_panel {
+  ul {
+    &.title1, &.item {
+      padding: 0 3.7%;
+      font-size: pxTorem(13px);
+      line-height: pxTorem(33px);
+      background: $F4F6FA;
+      overflow: hidden;
+      color: inherit;
+      li {
+        float: left;
+        &:first-child {
+          width: 8.6%;
+          margin-right: 11.5%;
+          text-align: center;
+        }
+        &:nth-child(2) {
+          width: 49.5%;
+          margin-right: 11.5%;
+        }
+        &:last-child {
+          width: calc(100% - 81.1%);
+          text-align: right;
+        }
+      }
+    }
+    &.title1 {
+      color: $color_6;
+    }
+    &.item {
+      height: pxTorem(38px);
+      line-height: pxTorem(38px);
+      background: $fff;
+      border-bottom: 1px solid $border_line;
+    }
+  }
+  a {
+    color: $color_6;
+  }
+  a.select {
+    display: block;
+    color: $blue;
+    clear: both;
+  }
+  .circle {
+    width: pxTorem(18px);
+    height: pxTorem(18px);
+    line-height: pxTorem(18px);
+    border-radius: 50%;
+    display: block;
+    margin-top: pxTorem(9px);
+    margin-left: pxTorem(6px);
+    color: $fff;
+  }
+  .no1 {
+    background: $red;
+  }
+  .no2 {
+    background: #FD9316;
+  }
+  .no3 {
+    background: #A758ED;
+  }
+}
+
+.dropDown {
+  ul {
+    background: $fff;
+    li {
+      padding: 0 5.3%;
+      overflow: hidden;
+      font-size: pxTorem($font_size18);
+      line-height: pxTorem(50px);
+      color: $color_6;
+      border-bottom: 1px solid $border_line;
+      &.select {
+        color: $blue;
+      }
+      span {
+        float: left;
+        &:last-child {
+          float: right;
+          width: pxTorem(20px);
+          height: pxTorem(20px);
+        }
+        &.check {
+          background-image: url("../images/check.png");
+          background-size: cover;
+          background-position: center;
+          margin-top: pxTorem(16px);
+        }
+      }
+    }
+  }
+}
+
+.rankDetail, .manageRankDetail {
+  margin-bottom: 0;
+  ul.title {
+    height: pxTorem(44px);
+    color: $color_6;
+    background: $fff;
+    li {
+      width: 33.33%;
+      line-height: pxTorem(44px);
+      font-size: pxTorem($font_size15);
+      text-align: center;
+      float: left;
+      a {
+        border-bottom: 2px solid $fff;
+        padding-bottom: pxTorem(11px);
+        color: $color_6;
+      }
+      &.select {
+        a {
+          color: $blue;
+          border-bottom: 2px solid $blue;
+        }
+      }
+    }
+  }
+  .rank_panel {
+    margin-top: pxTorem(10px);
+    .circle {
+      margin-top: pxTorem(11px);
+    }
+    ul {
+      &.title1 {
+        height: pxTorem(40px);
+        line-height: pxTorem(40px);
+        background: $fff;
+        border-bottom: 1px solid $border_line;
+      }
+      &.item {
+        height: pxTorem(41px);
+        line-height: pxTorem(41px);
+      }
+    }
+  }
+}
+
+.manageRankDetail {
+  ul.title {
+    li {
+      width: 20%;
+    }
+  }
+}
+.selectRange{
+  height: pxTorem(50px);
+  background: $blue;
+  position: relative;
+  color: $fff;
+  p{
+    height: pxTorem(50px);
+    line-height: pxTorem(50px);
+    text-align: center;
+    font-size: pxTorem($font_size16);
+  }
+  a{
+    position: absolute;
+    left: 3.7%;
+    height: pxTorem(50px);
+    line-height: pxTorem(50px);
+    color: inherit;
+    font-size: pxTorem($font_size14);
+  }
+}
+.manageIndex {
+  .top {
+    height: pxTorem(90px);
+    background: #3F7BE9;
+    overflow: hidden;
+    p {
+      font-size: pxTorem($font_size13);
+      color: $fff;
+      text-align: center;
+      margin-top: pxTorem(8px);
+    }
+  }
+  .classify {
+    margin-top: pxTorem(-59px);
+  }
+  .echarts {
+    background: $fff;
+    padding: 0 3.7%;
+    height: pxTorem(299px);
+    overflow: hidden;
+    p {
+      font-size: pxTorem($font_size13);
+      margin: pxTorem(16px) 0 pxTorem(16px);
+    }
+  }
+}
+
+.topTitle {
+  width: 100%;
+  height: pxTorem(44px);
+  background: $blue;
+  ul {
+    display: table;
+    margin: 0 auto;
+    overflow: hidden;
+    li {
+      float: left;
+      line-height: pxTorem(44px);
+      font-size: pxTorem($font_size18);
+      margin: 0 pxTorem(27px);
+      &:first-child{
+        margin-left: 0;
+      }
+      &:last-child{
+        margin-right: 0;
+      }
+      /*&:nth-child(2) {
+        margin: 0 pxTorem(54px);
+      }*/
+      a {
+        color: rgba($fff, .6);
+        padding-bottom: pxTorem(6px);
+        border-bottom: 2px solid transparent;
+      }
+      &.select {
+        a {
+          color: $fff;
+          border-bottom: 2px solid $fff;
+        }
+      }
+    }
+  }
+}
+
+.manager {
+  ul {
+    li {
+      &:nth-child(2) {
+        margin: 0 pxTorem(15px);
+      }
+      margin: 0 pxTorem(15px);
+
+    }
+  }
+}
+
+.statisticsTitle {
+  width: 100%;
+  height: pxTorem(44px);
+  background: $fff;
+  margin: pxTorem(10px) 0;
+  overflow: hidden;
+  li {
+    width: 33.33%;
+    text-align: center;
+    color: $color_6;
+    line-height: pxTorem(44px);
+    height: pxTorem(44px);
+    float: left;
+    font-size: pxTorem($font_size16);
+    a {
+      color: inherit;
+    }
+    span {
+      display: block;
+      margin: 0 auto;
+      width: pxTorem(22px);
+      height: 0;
+      border-bottom: 2px solid transparent;
+      margin-top: -2px;
+    }
+    &.select {
+      color: $blue;
+      span {
+        border-bottom: 2px solid $blue;
+      }
+    }
+  }
+}
+
+.myShop {
+  .statisticsTitle {
+    margin-top: 0;
+  }
+}
+
+.modelTitle {
+  font-size: pxTorem(13px);
+  line-height: 1;
+  margin: pxTorem(16px) 0;
+  float: left;
+  color: $color_6;
+}
+
+.analysisCard {
+  overflow: hidden;
+  clear: both;
+  margin-top: pxTorem(8px);
+  .card {
+    width: 49%;
+    float: left;
+    img {
+      width: pxTorem(32px);
+      height: pxTorem(32px);
+      float: left;
+      margin-right: pxTorem(14px);
+    }
+    ul {
+      float: left;
+      font-size: pxTorem($font_size15);
+      color: $color_9;
+      overflow: hidden;
+      line-height: 1.1;
+      //width: calc(100% - .92rem);
+      li {
+        overflow: hidden;
+        &:last-child {
+          margin-top: pxTorem(9px);
+        }
+        > span {
+          &:first-child {
+            color: $blue;
+            font-size: pxTorem($font_size24);
+          }
+          &:nth-child(2) {
+            font-size: pxTorem($font_size15);
+            color: $color_6;
+            line-height: 1;
+            margin-top: pxTorem(6px);
+          }
+
+          line-height: 1;
+          float: left;
+        }
+        p {
+          float: left;
+          margin-left: pxTorem(10px);
+          font-size: pxTorem($font_size14);
+          color: $red;
+          margin-top: pxTorem(6px);
+          span {
+            float: left;
+            &:first-child {
+              margin-right: pxTorem(4px);
+              width: pxTorem(6px);
+              height: 11px;
+              margin-top: pxTorem(2px);
+            }
+          }
+        }
+      }
+    }
+    &:last-child {
+      img {
+        margin-left: pxTorem(30px);
+      }
+    }
+  }
+  .line {
+    float: left;
+    width: 0;
+    height: pxTorem(30px);
+    border-right: 1px solid $border_line;
+  }
+}
+
+span.up {
+  width: pxTorem(8px);
+  height: pxTorem(11px);
+  background: url("../images/up.png");
+  background-position: center;
+  background-size: cover;
+}
+
+span.down {
+  width: pxTorem(8px);
+  height: pxTorem(11px);
+  background: url("../images/down.png");
+  background-position: center;
+  background-size: cover;
+}
+
+#kl_analysis {
+  width: 100%;
+  height: pxTorem(240px);
+}
+
+#sexRatio, #customer_attr {
+  width: 100%;
+  height: pxTorem(172px);
+  clear: both;
+}
+
+#ageRatio {
+  width: 100%;
+  height: pxTorem(189px);
+}
+
+#passengerHours {
+  width: 100%;
+  height: pxTorem(215px);
+  clear: both;
+}
+
+#daytimeTrend {
+  width: 100%;
+  height: pxTorem(250px);
+}
+
+#time_analysis {
+  width: 100%;
+  height: pxTorem(238px);
+}
+
+#number_of_stores {
+  width: 100%;
+  height: pxTorem(273px);
+  clear: both;
+}
+
+.legend {
+  overflow: hidden;
+  position: absolute;
+  bottom: pxTorem(6px);
+  left: 50%;
+  transform: translateX(-50%);;
+  span {
+    float: left;
+    font-size: pxTorem($font_size13);
+    line-height: 1.1;
+    &:first-child, &:last-child {
+      width: pxTorem(42px);
+      height: 0;
+      border-bottom: 1px solid $border_line;
+      margin-top: pxTorem(6px);
+    }
+    &:nth-child(2) {
+      margin: 0 pxTorem(15px);
+    }
+  }
+}
+span.leftTip{
+  width: pxTorem(21px);
+  height: pxTorem(21px);
+  margin-top: pxTorem(17px);
+  background: url("../images/leftTip_date.png");
+  background-position: center;
+  background-size: cover;
+}
+span.rightTip_date{
+  width: pxTorem(21px);
+  height: pxTorem(21px);
+  margin-top: pxTorem(17px);
+  background: url("../images/rightTip_date.png");
+  background-position: center;
+  background-size: cover;
+}
+.date{
+  height: pxTorem(56px);
+  background: $fff;
+  div{
+    margin: 0 auto;
+    display: table;
+    span{
+      float: left;
+      &:nth-child(2){
+        margin: 0 pxTorem(21px);
+        text-align: center;
+        color: $color_6;
+        font-size: pxTorem($font_size16);
+        line-height: pxTorem(56px);
+      }
+    }
+  }
+}
+.passengerFlow {
+  .kl_analysis {
+    height: pxTorem(362px);
+    background: $fff;
+    padding: 0 3.7%;
+    position: relative;
+  }
+  .customerAttr {
+    height: pxTorem(408px);
+    background: $fff;
+    margin-top: pxTorem(10px);
+    padding: 0 3.7%;
+    .vertLine {
+      width: 80%;
+      height: 0;
+      margin: 0 auto;
+      border-bottom: 1px dashed $border_line;
+    }
+  }
+}
+
+.manage_customerAttr, .timeAnalysis, .number_of_stores {
+  height: pxTorem(217px);
+  background: $fff;
+  padding: 0 3.7%;
+  margin-top: pxTorem(10px);
+}
+
+.timeAnalysis {
+  height: pxTorem(303px);
+}
+
+.number_of_stores {
+  height: pxTorem(337px);
+}
+
+.flowComposition {
+  //height: pxTorem(322px);
+  background: $fff;
+  padding: 0 3.7%;
+  padding-bottom: pxTorem(30px);
+  margin-top: pxTorem(10px);
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    clear: both;
+    font-size: pxTorem($font_size13);
+    thead {
+      background: #F9FAFC;
+    }
+    tr {
+      height: pxTorem(35px);
+      td, th {
+        border: 1px solid $border_line;
+        text-align: center;
+      }
+    }
+  }
+}
+
+.passengerHours, .daytimeTrend {
+  height: pxTorem(280px);
+  background: $fff;
+  margin-top: pxTorem(10px);
+  padding: 0 3.7%;
+  position: relative;
+}
+
+.passengerHours {
+  .legend {
+    left: 19%;
+    transform: translateX(0);
+  }
+}
+
+.daytimeTrend {
+  height: pxTorem(295px);
+}
+
+.zl_analysis {
+  height: pxTorem(362px);
+  background: $fff;
+  padding: 0 3.7%;
+  position: relative;
+}
+
+.heatChart {
+  height: pxTorem(285px);
+  background: $fff;
+  margin-top: pxTorem(10px);
+  padding: 0 3.7%;
+  .modelTitle {
+    span {
+      color: $color_9;
+      margin-left: pxTorem(10px);
+    }
+  }
+  img {
+    max-width: 100%;
+    height: pxTorem(216px);
+  }
+}
+
+.myChance {
+  .chancePanel {
+    height: pxTorem(95px);
+    background: $fff;
+    padding: 0 3.7%;
+    .panel {
+      width: 49%;
+      float: left;
+      margin-top: pxTorem(24px);
+      img {
+        width: pxTorem(32px);
+        height: pxTorem(32px);
+        float: left;
+        margin-right: pxTorem(14px);
+      }
+      ul {
+        float: left;
+        font-size: pxTorem($font_size15);
+        color: $color_9;
+        li {
+          line-height: 1;
+          &:last-child {
+            font-size: pxTorem($font_size24);
+            line-height: 1;
+            color: $blue;
+            margin-top: pxTorem(10px);
+          }
+        }
+      }
+      &:last-child {
+        img {
+          margin-left: pxTorem(30px);
+        }
+      }
+    }
+    .line {
+      float: left;
+      width: 0;
+      height: pxTorem(30px);
+      border-right: 1px solid $border_line;
+      margin-top: pxTorem(34px);
+    }
+  }
+  .storeList {
+    .panel {
+      padding: pxTorem(22px) 3.7%;
+      overflow: hidden;
+      margin-top: pxTorem(10px);
+      background: $fff;
+      .ava {
+        float: left;
+        width: pxTorem(64px);
+        height: pxTorem(64px);
+        position: relative;
+        img {
+          width: pxTorem(64px);
+          height: pxTorem(64px);
+          border-radius: 50%;
+        }
+        .female, .male {
+          position: absolute;
+          width: pxTorem(28px);
+          height: pxTorem(28px);
+          right: pxTorem(-4px);
+          bottom: pxTorem(-6px);
+        }
+        .female {
+          background: url("../images/female.png");
+          background-size: cover;
+          background-position: center;
+        }
+        .male {
+          background: url("../images/male.png");
+          background-size: cover;
+          background-position: center;
+        }
+        p {
+          font-size: pxTorem($font_size15);
+          line-height: 1;
+          margin-top: pxTorem(10px);
+          text-align: center;
+          color: $color_6;
+        }
+      }
+      .infor {
+        float: left;
+        margin-left: pxTorem(20px);
+        dl {
+          line-height: 1;
+          dt {
+            font-size: pxTorem($font_size15);
+            color: $color_9;
+          }
+          dd {
+            font-size: pxTorem($font_size13);
+            color: $color_6;
+            margin-top: pxTorem(8px);
+          }
+          &:last-child {
+            margin-top: pxTorem(14px);
+          }
+        }
+      }
+    }
+  }
+}
+
+.choose_shop {
+  .haspadding {
+    padding: 0 3.7%;
+    overflow: hidden;
+    color: $color_6;
+    font-size: pxTorem($font_size14);
+    .title {
+      color: $color_9;
+      line-height: 1;
+      margin: pxTorem(15px) 0 pxTorem(10px);
+    }
+    ul.btn {
+      overflow: hidden;
+      li {
+        width: 30%;
+        height: pxTorem(36px);
+        background: $fff;
+        line-height: pxTorem(36px);
+        text-align: center;
+        float: left;
+        margin-right: pxTorem(10px);
+        &.select {
+          background: $blue;
+          color: $fff;
+        }
+        &:nth-child(n + 4) {
+          margin-top: pxTorem(10px);
+        }
+      }
+    }
+  }
+  ul.shopList {
+    background: $fff;
+    padding: 0 3.7%;
+    color: $color_6;
+    font-size: pxTorem($font_size14);
+    li {
+      height: pxTorem(44px);
+      line-height: pxTorem(44px);
+      border-bottom: 1px solid $border_line;
+      &:last-child {
+        border-bottom: none;
+      }
+    }
+  }
+  ul.letter {
+    width: 4%;
+    position: absolute;
+    background: $fff;
+    padding: 14.7% 0 0;
+    top: 0;
+    right: 0;
+    //height: 100%;
+    font-size: pxTorem(11px);
+    color: $blue;
+    line-height: pxTorem(17px);
+    text-align: center;
+    li{
+      margin-top: pxTorem(3px);
+    }
+  }
+}
+
+.myShop {
+  .classify {
+    overflow: hidden;
+    height: pxTorem(94px);
+    background: $fff;
+    padding: 0 3.7%;
+    li {
+      float: left;
+      width: 33.33%;
+      text-align: center;
+      &:first-child {
+        text-align: left;
+      }
+      &:last-child {
+        text-align: right;
+      }
+      &:nth-child(2) {
+        p:last-child {
+          display: table;
+          margin: 0 auto;
+          margin-top: pxTorem(10px);
+        }
+      }
+      p {
+        &:first-child {
+          font-size: pxTorem($font_size13);
+          color: $color_9;
+          line-height: 1;
+          margin-top: pxTorem(24px);
+        }
+        &:last-child {
+          font-size: pxTorem($font_size24);
+          line-height: 1;
+          color: $blue;
+          margin-top: pxTorem(10px);
+          overflow: hidden;
+          span {
+            float: left;
+            color: $blue;
+            &:last-child {
+              font-size: pxTorem($font_size14);
+              color: $red;
+            }
+            &:nth-child(2) {
+              margin-left: pxTorem(10px);
+              margin-top: pxTorem(8px);
+            }
+            &:nth-child(3) {
+              margin-left: pxTorem(5px);
+              margin-top: pxTorem(8px);
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+table.myTable {
+  width: 100%;
+  height: pxTorem(220px);
+  background: $fff;
+  margin-top: pxTorem(10px);
+  border-collapse: collapse;
+  thead {
+    color: $color_9;
+    font-size: pxTorem($font_size13);
+    tr {
+      height: pxTorem(40px);
+      td {
+        text-align: center;
+        &:last-child {
+          text-align: right;
+          padding-right: 3.7%;
+        }
+      }
+    }
+  }
+  tbody {
+    color: $color_6;
+    tr {
+      height: pxTorem(45px);
+      td {
+        text-align: center;
+        font-size: pxTorem($font_size14);
+        line-height: pxTorem(45px);
+        &:last-child {
+          text-align: right;
+          padding-right: 3.7%;
+        }
+      }
+      border-top: 1px solid $border_line;
+    }
+  }
+}
+
+.myArea {
+  table {
+    margin-top: 0;
+    tbody tr td {
+      color: #2C3037;
+      &:first-child {
+        padding-left: 3.7%;
+        text-align: left;
+      }
+      &:last-child {
+        padding-right: 7%;
+        a {
+          text-decoration: underline;
+          color: $blue;
+        }
+      }
+    }
+    thead tr td {
+      &:first-child {
+        padding-left: 3.7%;
+        text-align: left;
+      }
+      &:last-child {
+        padding-right: 3.7%;
+      }
+    }
+  }
+}
+
+.concatUs {
+  padding: 0 3.7%;
+  background: $fff;
+  overflow: hidden;
+  .businessCooperation, .companyAddress {
+    height: pxTorem(107px);
+    border-bottom: 1px solid $border_line;
+    li {
+      font-size: pxTorem($font_size16);
+      line-height: 1;
+      &:first-child {
+        font-size: pxTorem($font_size18);
+        margin-top: pxTorem(40px);
+        color: $color_6;
+      }
+      &:nth-child(2) {
+        margin-top: pxTorem(18px);
+      }
+      &:last-child {
+        margin-top: pxTorem(16px);
+      }
+      span {
+        color: $blue;
+      }
+    }
+  }
+  .companyAddress {
+    border-bottom: none;
+    height: pxTorem(82px);
+  }
+  .aq {
+    width: pxTorem(150px);
+    height: pxTorem(176px);
+    margin: pxTorem(138px) auto 0;
+    img {
+      width: pxTorem(150px);
+      height: pxTorem(150px);
+    }
+    p {
+      font-size: pxTorem($font_size15);
+      line-height: 1;
+      margin-top: pxTorem(10px);
+      text-align: center;
+      color: $color_9;
+    }
+  }
+}
+
+.question {
+  padding: 0 3.7%;
+  overflow: hidden;
+  dl {
+    border-bottom: 1px solid $border_line;
+    padding-bottom: pxTorem(20px);
+    dt {
+      font-size: pxTorem($font_size18);
+      line-height: 1;
+      color: $color_6;
+      margin-top: pxTorem(20px);
+    }
+    dd {
+      font-size: pxTorem($font_size15);
+      color: $color_9;
+      line-height: pxTorem(25px);
+      margin-top: pxTorem(10px);
+    }
+  }
+}
+p.errorTip{
+  width: 100%;
+  height: pxTorem(40px);
+  line-height: pxTorem(40px);
+  margin: pxTorem(10px) 0;
+  text-align: center;
+  color: $red;
+  font-size: pxTorem($font_size14);
+}
+.changePass {
+  input {
+    padding-left: 3.7%;
+    width: 96.3%;
+    height: pxTorem(50px);
+    line-height: pxTorem(50px);
+    font-size: pxTorem($font_size16);
+    color: $color_9;
+    background: $fff;
+    margin-top: pxTorem(20px);
+  }
+  button {
+    height: pxTorem(50px);
+    color: $blue;
+    font-size: pxTorem($font_size18);
+    line-height: pxTorem(50px);
+    text-align: center;
+    width: 100%;
+    background: $fff;
+    float: left;
+  }
+}
+
+.account {
+  ul {
+    background: $fff;
+    font-size: pxTorem($font_size16);
+    color: $color_9;
+    padding-left: 3.7%;
+    li {
+      border-bottom: 1px solid $border_line;
+      padding-right: 3.7%;
+      overflow: hidden;
+      a {
+        display: block;
+        height: pxTorem(50px);
+      }
+      &:first-child {
+        a {
+          height: pxTorem(80px);
+        }
+        height: pxTorem(80px);
+        span {
+          line-height: pxTorem(80px);
+          img {
+            width: pxTorem(64px);
+            height: pxTorem(64px);
+            vertical-align: middle;
+            border-radius: 50%;
+          }
+          &.rightTip {
+            margin-top: pxTorem(33px);
+          }
+        }
+      }
+      span {
+        float: right;
+        line-height: pxTorem(50px);
+        color: $color_9;
+        &:first-child {
+          color: $color_6;
+          float: left;
+        }
+        &.rightTip {
+          margin-left: pxTorem(5px);
+        }
+      }
+    }
+  }
+  .changePassword {
+    margin-top: pxTorem(20px);
+    li:first-child {
+      height: pxTorem(50px);
+      span {
+        line-height: pxTorem(50px);
+        &:last-child {
+          margin-top: pxTorem(18px);
+        }
+      }
+    }
+  }
+  button {
+    height: pxTorem(50px);
+    color: $blue;
+    font-size: pxTorem($font_size18);
+    line-height: pxTorem(50px);
+    text-align: center;
+    width: 100%;
+    background: $fff;
+    float: left;
+    margin-top: pxTorem(20px);
+  }
+}
+
+span.rightTip {
+  width: pxTorem(14px);
+  height: pxTorem(14px);
+  margin-top: pxTorem(18px);
+  background: url("../images/rightTip.png");
+  background-position: center;
+  background-size: cover;
+}
+span.upTip {
+  width: pxTorem(14px);
+  height: pxTorem(14px);
+  margin-top: pxTorem(18px);
+  background: url("../images/upTip.png");
+  background-position: center;
+  background-size: cover;
+}
+span.downTip {
+  width: pxTorem(14px);
+  height: pxTorem(14px);
+  margin-top: pxTorem(18px);
+  background: url("../images/downTip.png");
+  background-position: center;
+  background-size: cover;
+}
+
+.myManage, .mySingle {
+  .banner {
+    width: 100%;
+    height: pxTorem(240px);
+    background: url("../images/myBg.png");
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+    img {
+      width: pxTorem(80px);
+      height: pxTorem(80px);
+      border: pxTorem(5px) solid rgba($fff, .3);
+      margin-top: pxTorem(30px);
+      border-radius: 50%;
+      display: inline-block;
+    }
+    p {
+      font-size: pxTorem($font_size18);
+      line-height: 1;
+      margin-top: pxTorem(10px);
+      color: $fff;
+    }
+  }
+  .panel {
+    overflow: hidden;
+    margin-top: pxTorem(20px);
+    background: $fff;
+    //height: pxTorem(50px);
+    padding-left: 3.7%;
+    a {
+      display: block;
+      height: pxTorem(50px);
+    }
+    img {
+      float: left;
+      width: pxTorem(24px);
+      height: pxTorem(24px);
+      margin-top: pxTorem(13px);
+      margin-right: pxTorem(14px);
+    }
+    ul {
+      float: left;
+      font-size: pxTorem($font_size16);
+      color: $color_6;
+      width: calc(100% - .76rem);
+      &.border {
+        border-bottom: 1px solid $border_line;
+      }
+      li {
+        overflow: hidden;
+        padding-right: 3.7%;
+        span {
+          line-height: pxTorem(50px);
+          &:first-child {
+            float: left;
+          }
+          &.rightTip {
+            float: right;
+          }
+        }
+      }
+    }
+  }
+}
+
+.setSales {
+  background: $fff;
+  ul {
+    background: $fff;
+    padding-left: 3.7%;
+    li {
+      overflow: hidden;
+      border-bottom: 1px solid $border_line;
+      padding-right: 3.7%;
+      &:nth-child(2){
+        border-bottom: none;
+      }
+      span {
+        float: left;
+        font-size: pxTorem($font_size16);
+        line-height: pxTorem(50px);
+        color: $color_6;
+        &.description {
+          width: pxTorem(22px);
+          height: pxTorem(22px);
+          background: url("../images/sm.png");
+          background-position: center;
+          background-size: cover;
+          margin-left: pxTorem(8px);
+          margin-top: pxTorem(14px);
+        }
+        &:last-child,&:nth-child(3) {
+          float: right;
+        }
+        &:nth-child(3){
+          margin-left: pxTorem(10px);
+        }
+      }
+    }
+  }
+  ol.dropDown{
+    margin-left: 3.7%;
+    background: $fff;
+    border-top: 1px solid $border_line;
+    li{
+      height: pxTorem(50px);
+      margin-right: 3.7%;
+      font-size: pxTorem($font_size16);
+      line-height: pxTorem(50px);
+      text-align: center;
+      color: $color_6;
+      border-bottom: 1px solid $border_line;
+      &:last-child{
+        border-bottom: none;
+      }
+      &.select{
+        background: $blue;
+        color: $fff;
+      }
+    }
+  }
+  /*.switch {
+    display: inline-block;
+    position: relative;
+    float: right;
+    margin-top: pxTorem(9px);
+    !*font-size: 12px;*!
+    width: pxTorem(51px);
+    height:pxTorem(30px);
+    line-height: pxTorem(31px);
+  }
+  .switch input {
+    width: pxTorem(51px);
+    height:pxTorem(30px);
+    position: absolute;
+    z-index: 2;
+    border: 0;
+    background: 0 0;
+    -webkit-appearance: none;
+    outline: 0;
+  }
+  .switch input:before {
+    content: '';
+    width: pxTorem(51px);
+    height:pxTorem(30px);
+    border: 1px solid #dfdfdf;
+    background-color: #fdfdfd;
+    border-radius: pxTorem(15px);
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    vertical-align: top;
+    -webkit-box-sizing: content-box;
+    box-sizing: content-box;
+    -webkit-box-shadow: #dfdfdf 0 0 0 0 inset;
+    box-shadow: #dfdfdf 0 0 0 0 inset;
+    -webkit-transition: border .4s, background-color .4s;
+    transition: border .4s, background-color .4s;
+    -webkit-background-clip: content-box;
+    background-clip: content-box;
+  }
+  .switch input:after {
+    content: '';
+    width: pxTorem(28px);
+    height:pxTorem(28px);
+    position: absolute;
+    top: 2px;
+    left: 0;
+    border-radius: 100%;
+    background-color: #fff;
+    -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
+    -webkit-transition: left .2s;
+    transition: left .2s;
+  }
+  .switch input:checked:before {
+    border-color: $green;
+    -webkit-box-shadow: $green 0 0 0 16px inset;
+    box-shadow: $green 0 0 0 16px inset;
+    background-color: $green;
+    transition: background-color .4s;
+    -webkit-transition: background-color .4s;
+  }
+  .switch input:checked:after {
+    left: pxTorem(25px);
+  }*/
+}
+
+.switch1 {
+  display: inline-block;
+  position: relative;
+  float: right;
+  margin-top: pxTorem(9px);
+  width: pxTorem(51px);
+  height: pxTorem(30px);
+  line-height: pxTorem(31px);
+  border: 1px solid #dfdfdf;
+  background-color: #fdfdfd;
+  border-radius: pxTorem(15px);
+  cursor: pointer;
+  .btn {
+    width: pxTorem(28px);
+    height: pxTorem(28px);
+    position: absolute;
+    top: 1px;
+    left: 0;
+    border-radius: 100%;
+    background-color: #fff;
+    -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
+    -webkit-transition: left .2s;
+    transition: left .2s;
+  }
+  &.select {
+    background: $green;
+    border-color: $green;
+    .btn {
+      left: pxTorem(25px);
+    }
+  }
+}
+
+/*注册登录*/
+.inputPanel {
+  padding: 0 3.7%;
+  height: pxTorem(50px);
+  background: $fff;
+  line-height: pxTorem(50px);
+  font-size: pxTorem($font_size16);
+  margin-top: pxTorem(20px);
+  &:first-child {
+    margin-top: pxTorem(50px);
+  }
+  label {
+    float: left;
+    width: 23%;
+    color: $color_6;
+  }
+  input {
+    height: pxTorem(50px);
+    margin-top: 0;
+    width: 77%;
+    padding-left: 0;
+    color: $color_9;
+    font-size: pxTorem($font_size16);
+  }
+}
+
+button.btn {
+  width: 100%;
+  height: pxTorem(50px);
+  background: $fff;
+  line-height: pxTorem(50px);
+  text-align: center;
+  color: $blue;
+  font-size: pxTorem($font_size18);
+  margin-top: pxTorem(60px);
+}
+
+.changePassword {
+  overflow: hidden;
+}
+
+.changeSuccess {
+  overflow: hidden;
+  text-align: center;
+  img {
+    width: pxTorem(100px);
+    height: pxTorem(100px);
+    margin-top: pxTorem(112px);
+  }
+  p {
+    color: $color_6;
+    line-height: 1;
+    margin-top: pxTorem(20px);
+    font-size: pxTorem($font_size18);
+  }
+  button.short_btn {
+    width: 74.7%;
+    height: pxTorem(50px);
+    line-height: pxTorem(50px);
+    border-radius: pxTorem(25px);
+    margin: 0 auto;
+    background: $blue;
+    text-align: center;
+    color: $fff;
+    margin-top: pxTorem(135px);
+    font-size: pxTorem($font_size18);
+  }
+}
+
+.avatar {
+  overflow: hidden;
+  text-align: center;
+  .ava{
+    background: $fff;
+    width: pxTorem(240px);
+    height: pxTorem(240px);
+    margin: pxTorem(60px) auto 0;
+    box-shadow: 0 0 6px 0 #C5C9D3;
+    img {
+      width: pxTorem(163px);
+      height: pxTorem(196px);
+      margin-top: pxTorem(22px);
+    }
+  }
+  .margin_top158 {
+    margin-top: pxTorem(158px);
+  }
+
+  button.lang_btn {
+    width: 92.6%;
+    height: pxTorem(50px);
+    line-height: pxTorem(50px);
+    text-align: center;
+    border-radius: pxTorem(25px);
+    font-size: pxTorem($font_size16);
+    background: $fff;
+    color: $blue;
+    &.select {
+      background: $blue;
+      color: $fff;
+    }
+  }
+
+}
+
+.userInfo {
+  overflow: hidden;
+  .age {
+    input {
+      text-align: right;
+    }
+  }
+  .sex {
+    width: pxTorem(108px);
+    height: pxTorem(32px);
+    border: 1px solid $blue;
+    border-radius: pxTorem(4px);
+    float: right;
+    margin-top: pxTorem(8px);
+    overflow: hidden;
+    span {
+      width: pxTorem(54px);
+      float: left;
+      line-height: pxTorem(34px);
+      text-align: center;
+      color: $blue;
+      &.select {
+        background: $blue;
+        color: $fff;
+      }
+    }
+  }
+}
+.phoneVeri{
+  color: $color_6;
+  overflow: hidden;
+  p{
+    padding: 0 3.7%;
+    font-size: pxTorem($font_size16);
+    line-height: pxTorem(24px);
+    margin-top: pxTorem(40px);
+  }
+  ul{
+    padding: 0 3.7%;
+    display: table;
+    overflow: hidden;
+    margin: pxTorem(20px) auto 0;
+    li{
+      width: pxTorem(40px);
+      height: pxTorem(40px);
+      background: $fff;
+      float: left;
+      position: relative;
+      margin-right: pxTorem(10px);
+      &:last-child{
+        margin-right: 0;
+      }
+      input{
+        width: pxTorem(40px);
+        height: pxTorem(40px);
+        line-height: pxTorem(40px);
+        text-align: center;
+        background: $fff;
+        position: absolute;
+        top: 0;
+      }
+    }
+  }
+  a{
+    display: block;
+    font-size: pxTorem($font_size16);
+    line-height: 1;
+    margin-top: pxTorem(20px);
+    text-align: center;
+    color: $blue;
+    text-decoration: underline;
+  }
+}
+button.fullWidth{
+  width: 100%;
+  background: $fff;
+  height: pxTorem(50px);
+  line-height: pxTorem(50px);
+  text-align: center;
+  font-size: pxTorem($font_size18);
+  color: $blue;
+  margin-top: pxTorem(40px);
+}
+.mailbox{
+  color: $color_6;
+  overflow: hidden;
+  p{
+    padding: 0 3.7%;
+    font-size: pxTorem($font_size16);
+    line-height: pxTorem(24px);
+    margin-top: pxTorem(40px);
+    span{
+      color: $blue;
+    }
+  }
+  a{
+    font-size: pxTorem($font_size16);
+    line-height: 1;
+    margin-top: pxTorem(20px);
+    margin-left: 3.7%;
+    float: left;
+    color: $blue;
+    text-decoration: underline;
+  }
+}
+.login{
+  img{
+    width: 100%;
+    height: pxTorem(200px);
+  }
+  .inputArea{
+    padding: pxTorem(10px) 5.3% 0;
+    input{
+      width: 100%;
+      height: pxTorem(62px);
+      line-height: pxTorem(72px);
+      font-size: pxTorem($font_size18);
+      text-indent: 1em;
+      border-bottom: 1px solid $border_line;
+    }
+  }
+  .password{
+    overflow: hidden;
+    font-size: pxTorem($font_size15);
+    color: $color_6;
+    margin-top: pxTorem(20px);
+    padding: 0 5.3%;
+    .remember{
+      float: left;
+      span{
+        float: left;
+        &:first-child{
+          width: pxTorem(14px);
+          height: pxTorem(14px);
+          margin-right: pxTorem(10px);
+          img{
+            width: pxTorem(14px);
+            height: pxTorem(14px);
+          }
+        }
+      }
+      a{
+        text-decoration: underline;
+      }
+    }
+    a{
+      float: right;
+      color: inherit;
+    }
+  }
+  button{
+    width: 89.4%;
+    height: pxTorem(50px);
+    line-height: pxTorem(50px);
+    text-align: center;
+    border-radius: pxTorem(25px);
+    font-size: pxTorem($font_size18);
+    background: $blue;
+    color: $fff;
+    margin: pxTorem(50px) 5.3% 0;
+  }
+  .registerNow{
+    font-size: pxTorem($font_size15);
+    color: $color_6;
+    text-align: center;
+    margin-top: pxTorem(40px);
+    a{
+      color: $blue;
+      text-decoration: underline;
+    }
+  }
+}
+.pictures{
+  width: 100%;
+  height: 100%;
+  background: url("../images/pzmb.png");
+  background-position: center;
+  background-size: cover;
+  position: relative;
+  img{
+    width: pxTorem(26px);
+    height: pxTorem(26px);
+    left: 3.7%;
+    position: absolute;
+    top: pxTorem(33px);
+  }
+  .clickMe{
+    width: pxTorem(100px);
+    height: pxTorem(100px);
+    left: 50%;
+    margin-left: pxTorem(-50px);
+    position: absolute;
+    bottom: pxTorem(30px);
+    background: url("../images/pz_btn.png");
+    background-position: center;
+    background-size: cover;
+  }
+}
+
+.guide{
+  img{
+    max-width: 100%;
+  }
+  .nav{
+    width: 100%;
+    height: pxTorem(116px);
+    background: url("../images/linkshop-tab-bg_01.png");
+    background-position: center;
+    background-size: cover;
+    .tnTab{
+      width: 60%;
+      height: pxTorem(96px);
+      margin: 0 auto;
+      li{
+        width: 42.6%;
+        line-height: pxTorem(76px);
+        margin: pxTorem(10px) 0;
+        border-radius: pxTorem(38px);
+        text-align: center;
+        font-size: pxTorem($font_size12);
+        color: rgba($fff,.56);
+        &:first-child{
+          float: left;
+          margin-left: 6.6%;
+        }
+        &:last-child{
+          float: right;
+          margin-right: 6.6%;
+        }
+        a{
+          color: inherit;
+        }
+        &.active{
+          background: #051235;
+          color: $fff;
+        }
+      }
+    }
+  }
+  .guide_container{
+    .tnTab1{
+      width: 100%;
+      height: pxTorem(160px);
+      background-color: rgba(8, 22, 33, 1);
+      //border: solid 1px rgba(6, 12, 29, 1);
+      li{
+        width: 50%;
+        height: pxTorem(160px);
+        float: left;
+        line-height: 1;
+        font-size: pxTorem($font_size12);
+        color: rgba($fff,.56);
+        &.active1{
+          background: url("../images/current_bg.png");
+          background-position: center;
+          background-size: cover;
+          color: $fff;
+        }
+        a{
+          display: table;
+          margin: 0 auto;
+          color: inherit;
+          img{
+            float: left;
+            margin-right: pxTorem(20px);
+          }
+          span{
+            float: left;
+            margin-top: pxTorem(60px);
+          }
+        }
+        &:first-child{
+          a{
+            img{
+              width: pxTorem(92px);
+              height: pxTorem(72px);
+              margin-top: pxTorem(44px);
+            }
+          }
+        }
+        &:last-child{
+          a{
+            img{
+              width: pxTorem(78px);
+              height: pxTorem(78px);
+              margin-top: pxTorem(38px);
+            }
+          }
+        }
+      }
+    }
+    .fixedNav{
+      position: fixed;
+      top: 0;
+    }
+    .version_container{
+      .btn{
+        width: 100%;
+        height: pxTorem(388px);
+        background: url("../images/ygb_06.png");
+        background-position: center;
+        background-size: cover;
+        text-align: center;
+        img{
+          width: 42.7%;
+          height: pxTorem(146px);
+          margin: 0 auto;
+        }
+      }
+    }
+  }
+  .tnTabContent,.tnTabContent1{display:none;}
+  .tnTabContent.current,.tnTabContent1.current1{display:block}
+}

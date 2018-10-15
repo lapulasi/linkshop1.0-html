@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>首页</title>
+    <meta name="viewport"
+          content="width=device-width,initial-scale=1,maximum-scale=1, minimum-scale=1,user-scalable=no">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/pageStyle.css">
+    <script src="js/echarts.min.js"></script>
+</head>
+<body>
+<div class="container index margin_bottom">
+    <div class="banner">
+        <!--<img src="images/mine_banner.png" alt="">-->
+        <div class="img" style="background-image: url('images/mine_banner.png')"></div>
+        <ul>
+            <li>
+                <span>店铺热力图</span>
+                颜色越深则表示客户停留时间越久
+            </li>
+            <li>截止时间：2017年8月19日</li>
+        </ul>
+    </div>
+    <div class="classify">
+        <div class="panel">
+            <img src="images/rll.png" alt="">
+            <ul class="info">
+                <li><span>582</span>人</li>
+                <li>客流量</li>
+            </ul>
+            <ul class="text">
+                <li>同比上升</li>
+                <li>排&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;名</li>
+            </ul>
+            <ul class="number">
+                <li class="up"></li>
+                <li>8</li>
+            </ul>
+            <ol>
+                <li><span class="red">120%</span></li>
+                <li><span class="up"></span><span class="red">6</span></li>
+            </ol>
+        </div>
+        <div class="panel">
+            <img src="images/pjsj.png" alt="">
+            <ul class="info">
+                <li><span>8</span>分钟</li>
+                <li>平均时长</li>
+            </ul>
+            <ul class="text">
+                <li>同比上升</li>
+                <li>排&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;名</li>
+            </ul>
+            <ul class="number">
+                <li class="down"></li>
+                <li>9</li>
+            </ul>
+            <ol>
+                <li><span class="green">120%</span></li>
+                <li><span class="down"></span><span class="green">6</span></li>
+            </ol>
+        </div>
+        <div class="panel">
+            <img src="images/age.png" alt="">
+            <ul class="info">
+                <li><span>38</span>岁</li>
+                <li>平均年龄</li>
+            </ul>
+            <ul class="three">
+                <li>历史年龄分布</li>
+                <li>20-40岁 <span>62%</span></li>
+                <li>40-60岁 <span>38%</span></li>
+            </ul>
+        </div>
+        <div class="panel">
+            <img src="images/nnbl.png" alt="">
+            <ul class="info">
+                <li><span>46%</span>
+                    <p>男</p></li>
+                <li><span class="pink">54%</span>
+                    <p class="color_6">女</p>
+                </li>
+            </ul>
+            <ul class="three">
+                <li>历史男女比例</li>
+                <li>男性占比 <span>46%</span></li>
+                <li>女性占比 <span>54%</span></li>
+            </ul>
+        </div>
+    </div>
+    <div class="echarts">
+        <p>日间趋势</p>
+        <div id="graph"></div>
+    </div>
+    <div class="rank">
+        <p class="title">
+            <span>TOP10排行榜</span>
+            <a href="#">更多排名 ></a>
+        </p>
+        <ul class="statisticsItems">
+            <li class="select"><a href="#">客流</a> <span></span></li>
+            <li><a href="#">客流频率</a><span></span></li>
+            <li><a href="#">平均驻留</a><span></span></li>
+        </ul>
+        <div class="rank_panel">
+            <ul class="title1">
+                <li>排名</li>
+                <li>门店名</li>
+                <li>客流量(人)</li>
+            </ul>
+            <a href="#" class="select">
+                <ul class="item">
+                    <li>8</li>
+                    <li>特斯拉电动车-大冲电</li>
+                    <li>528</li>
+                </ul>
+            </a>
+            <a href="#">
+                <ul class="item">
+                    <li><span class="circle no1">1</span></li>
+                    <li>特斯拉电动车-大冲电</li>
+                    <li>528</li>
+                </ul>
+            </a>
+            <a href="#">
+                <ul class="item">
+                    <li><span class="circle no2">2</span></li>
+                    <li>特斯拉电动车-大冲电</li>
+                    <li>528</li>
+                </ul>
+            </a>
+            <a href="#">
+                <ul class="item">
+                    <li><span class="circle no3">3</span></li>
+                    <li>特斯拉电动车-大冲电</li>
+                    <li>528</li>
+                </ul>
+            </a>
+            <a href="#">
+                <ul class="item">
+                    <li>4</li>
+                    <li>特斯拉电动车-大冲电</li>
+                    <li>528</li>
+                </ul>
+            </a>
+            <a href="#">
+                <ul class="item">
+                    <li>5</li>
+                    <li>特斯拉电动车-大冲电</li>
+                    <li>528</li>
+                </ul>
+            </a>
+            <a href="#">
+                <ul class="item">
+                    <li>6</li>
+                    <li>特斯拉电动车-大冲电</li>
+                    <li>528</li>
+                </ul>
+            </a>
+            <a href="#">
+                <ul class="item">
+                    <li>7</li>
+                    <li>特斯拉电动车-大冲电</li>
+                    <li>528</li>
+                </ul>
+            </a>
+            <a href="#" class="select">
+                <ul class="item">
+                    <li>8</li>
+                    <li>特斯拉电动车-大冲电</li>
+                    <li>528</li>
+                </ul>
+            </a>
+            <a href="#">
+                <ul class="item">
+                    <li>9</li>
+                    <li>特斯拉电动车-大冲电</li>
+                    <li>528</li>
+                </ul>
+            </a>
+            <a href="#">
+                <ul class="item">
+                    <li>10</li>
+                    <li>特斯拉电动车-大冲电</li>
+                    <li>528</li>
+                </ul>
+            </a>
+        </div>
+    </div>
+</div>
+<ul class="footer">
+    <a href="#">
+        <li class="select">
+            <p class="icon icon_sy_l"></p>
+            <p>首页</p>
+        </li>
+    </a>
+    <a href="#">
+        <li>
+            <!--<img src="images/sjzx_l.png" alt="">-->
+            <p class="icon icon_sjzx_h"></p>
+            <p>数据中心</p>
+        </li>
+    </a>
+    <a href="#">
+        <li>
+            <!--<img src="images/sxt_l.png" alt="">-->
+            <p class="icon icon_sxt_h"></p>
+            <p>摄像头</p>
+        </li>
+    </a>
+    <a href="#">
+        <li>
+            <!--<img src="images/w_l.png" alt="">-->
+            <p class="icon icon_w_h"></p>
+            <p>我</p>
+        </li>
+    </a>
+</ul>
+<script src="js/jquery-2.1.4.js"></script>
+<script src="js/fontSize.js"></script>
+<script src="js/page/single_store_index.js"></script>
+</body>
+</html>
